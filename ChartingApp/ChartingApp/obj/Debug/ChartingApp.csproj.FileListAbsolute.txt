@@ -1,0 +1,77 @@
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\bin\Debug\ChartingApp.exe.config
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\bin\Debug\ChartingApp.exe
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\bin\Debug\ChartingApp.pdb
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\bin\Debug\LiveCharts.dll
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.dll
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.dll
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\bin\Debug\LiveCharts.pdb
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\bin\Debug\LiveCharts.xml
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.pdb
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.xml
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.pdb
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.xml
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\obj\Debug\ChartingApp.Properties.Resources.resources
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csproj.GenerateResource.Cache
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csproj.CoreCompileInputs.cache
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\obj\Debug\ChartingApp.exe
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\obj\Debug\ChartingApp.pdb
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\obj\Debug\ChartingApp.Form1.resources
+c:\users\bosko\source\repos\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csprojResolveAssemblyReference.cache
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\bin\Debug\ChartingApp.exe.config
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.exe
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.pdb
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\bin\Debug\ChartingApp.exe
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\bin\Debug\ChartingApp.pdb
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.dll
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.dll
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.dll
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.pdb
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.xml
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.pdb
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.xml
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.pdb
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.xml
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csprojResolveAssemblyReference.cache
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.Form1.resources
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.Properties.Resources.resources
+D:\projects\ChartingApp2.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csproj.GenerateResource.Cache
+D:\projects\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\ChartingApp.exe.config
+D:\projects\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.exe
+D:\projects\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.pdb
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\ChartingApp.exe.config
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\ChartingApp.exe
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\ChartingApp.pdb
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.dll
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.pdb
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.xml
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csprojResolveAssemblyReference.cache
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.Form1.resources
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.Properties.Resources.resources
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csproj.GenerateResource.Cache
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csproj.CoreCompileInputs.cache
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.exe
+C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.pdb
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\ChartingApp.exe.config
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.exe
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.pdb
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\ChartingApp.exe
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\ChartingApp.pdb
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.dll
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.pdb
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.xml
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csprojResolveAssemblyReference.cache
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.Form1.resources
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.Properties.Resources.resources
+C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csproj.GenerateResource.Cache
