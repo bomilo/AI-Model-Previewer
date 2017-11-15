@@ -21,7 +21,10 @@ namespace ChartingApp
 
         int predictionCounter = 0;
         int realMarketCounter = 0;
-        //private static double previousPoint = 0;
+        private double previousCalculatedPrice = 0;
+        private bool previousPredictedPriceIsAHit;
+        private double previousRealPrice;
+        private double previousPredictedPrice;
 
         public ChartValues<MeasureModel> PredictionValues { get; set; }
         public ChartValues<MeasureModel> RealMarketValues { get; set; }
@@ -177,22 +180,54 @@ namespace ChartingApp
                 return;
             }
 
-            AddNewPoint(DataHolder.PredictionTimes, DataHolder.PredictionPrices, PredictionValues, predictionCounter);
+            AddNewPoint(DataHolder.PredictionTimes, DataHolder.PredictionPrices, PredictionValues, predictionCounter, true);
             predictionCounter++;
-
-            //lets only use the last 30 values
-            //if (PredictionValues.Count > 30) PredictionValues.RemoveAt(0);
         }
 
-        private void AddNewPoint(DateTime[] times, double[] prices, ChartValues<MeasureModel> destinationLSeriePointcollection, int counter)
+        private void AddNewPoint(DateTime[] times, double[] prices, ChartValues<MeasureModel> destinationLSeriePointcollection, int counter, bool applyMathModel = false)
         {
+            #region 
+
+            double price = 0;
+
+            if (applyMathModel)
+            {
+                // Calculate new predictedPrice by using mathematical model
+
+                double predictedPrice = prices[counter];
+
+                if (previousCalculatedPrice == 0)
+                {
+                    price = ReturnNormalizedPredictedPrice(predictedPrice);
+                }
+                else
+                {
+                    if (previousPredictedPriceIsAHit)
+                    {
+                        price = ReturnNormalizedPredictedPrice(previousRealPrice - previousPredictedPrice + predictedPrice);
+                    }
+                    else
+                    {
+                        price = ReturnNormalizedPredictedPrice(previousRealPrice - previousCalculatedPrice + predictedPrice);
+                    }
+                }
+
+                previousCalculatedPrice = price;
+                previousPredictedPrice = predictedPrice;
+                previousPredictedPriceIsAHit = (price == DataHolder.RealPrices[counter]) ? true : false;
+                previousRealPrice = DataHolder.RealPrices[counter];
+            }
+            else
+            {
+                price = prices[counter];
+            }
+
+            #endregion
+
             MeasureModel Point = new MeasureModel();
-
             Point.DateTime = times[counter];
-            Point.Value = ReturnNormalizedPredictedPrice(prices, counter);
+            Point.Value = price;
             destinationLSeriePointcollection.Add(Point);
-
-            System.Diagnostics.Debug.WriteLine(Point.Value);
         }
 
         private void MarketSimulationExecutionTimerOnTickHandler(object sender, EventArgs e)
@@ -211,26 +246,10 @@ namespace ChartingApp
             //if (RealMarketValues.Count > 30) RealMarketValues.RemoveAt(0);
         }
 
-        private double ReturnNormalizedPredictedPrice (double[] predictedPrice, int index)
+        private double ReturnNormalizedPredictedPrice(double calculatedPredictedPrice)
         {
-            double calculatedPrice = 0;
             double tickSize = DataHolder.TickTable[textBox1.Text];
-            double previousPrice = (index != 0) ? predictedPrice[index - 1] : 0;
-            double currentPrice = predictedPrice[index];
-
-            if (currentPrice > previousPrice)
-            {
-                calculatedPrice = Math.Floor(currentPrice / tickSize) * tickSize;
-            }
-            else if (currentPrice == previousPrice)
-            {
-                calculatedPrice = previousPrice;
-            }
-            else
-            {
-                calculatedPrice = Math.Ceiling(currentPrice / tickSize) * tickSize;
-            }
-            return calculatedPrice;
+            return Math.Round(Math.Floor(calculatedPredictedPrice / tickSize) * tickSize, 2);
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -242,89 +261,117 @@ namespace ChartingApp
 
                 #region Prediction related
 
-                if (PredictionTimer != null)
-                {
-                    predictionCounter = 0;
-                    PredictionTimer.Stop();
-                    PredictionTimer.Dispose();
-                    PredictionTimer = null;
-                    cartesianChart1.Series[0].Values.Clear();
-                }
+                //if (PredictionTimer != null)
+                //{
+                //    predictionCounter = 0;
+                //    PredictionTimer.Stop();
+                //    PredictionTimer.Dispose();
+                //    PredictionTimer = null;
+                //    cartesianChart1.Series[0].Values.Clear();
+                //}
 
-                PredictionTimer = new Timer
-                {
-                    Interval = 750
-                };
-                PredictionTimer.Tick += PredictionTimerOnTickHandler;
-                PredictionTimer.Start();
+                //PredictionTimer = new Timer
+                //{
+                //    Interval = 750
+                //};
+                //PredictionTimer.Tick += PredictionTimerOnTickHandler;
+                //PredictionTimer.Start();
 
 
                 #endregion
 
                 #region Market Execution Simulation
 
-                if (RealMarketTimer != null)
-                {
-                    realMarketCounter = 0;
-                    RealMarketTimer.Stop();
-                    RealMarketTimer.Dispose();
-                    RealMarketTimer = null;
-                    cartesianChart1.Series[1].Values.Clear();
-                }
+                //if (RealMarketTimer != null)
+                //{
+                //    realMarketCounter = 0;
+                //    RealMarketTimer.Stop();
+                //    RealMarketTimer.Dispose();
+                //    RealMarketTimer = null;
+                //    cartesianChart1.Series[1].Values.Clear();
+                //}
 
-                RealMarketTimer = new Timer
-                {
-                    Interval = 1000
-                };
-                RealMarketTimer.Tick += MarketSimulationExecutionTimerOnTickHandler;
-                RealMarketTimer.Start();
+                //RealMarketTimer = new Timer
+                //{
+                //    Interval = 1000
+                //};
+                //RealMarketTimer.Tick += MarketSimulationExecutionTimerOnTickHandler;
+                //RealMarketTimer.Start();
 
                 #endregion
 
                 #region Quick Testing Code
 
-                //new System.Threading.Thread(() =>
-                //{
+                cartesianChart1.Series[0].Values.Clear();
+                cartesianChart1.Series[1].Values.Clear();
 
+                System.Threading.Thread dedicatedThread;
 
-                //    for (int i = 0; i < DataHolder.PredictionTimes.Length; i++)
-                //    {
-                //        MeasureModel PredictionPoint = new MeasureModel();
-                //        MeasureModel RealMarketPoint;
-                //        PredictionPoint.DateTime = DataHolder.PredictionTimes[predictionCounter];
-                //        PredictionPoint.Value = DataHolder.PredictionPrices[predictionCounter];
-                //        PredictionValues.Add(PredictionPoint);
-                //        predictionCounter++;
+                System.Threading.ThreadStart threadStart = () =>
+                {
+                    for (int i = 0; i < DataHolder.PredictionTimes.Length; i++)
+                    {
+                        AddNewPoint(DataHolder.PredictionTimes, DataHolder.PredictionPrices, PredictionValues, predictionCounter, true);
+                        predictionCounter++;
+                        System.Threading.Thread.Sleep(1000);
+                        AddNewPoint(DataHolder.RealTimes, DataHolder.RealPrices, RealMarketValues, realMarketCounter);
+                        realMarketCounter++;
+                    }
 
-                //        while (true)
-                //        {
-                //            if (realMarketCounter < DataHolder.RealTimes.Length)
-                //            {
-                //                RealMarketPoint = new MeasureModel();
-                //                RealMarketPoint.DateTime = DataHolder.RealTimes[realMarketCounter];
-                //                RealMarketPoint.Value = DataHolder.RealPrices[realMarketCounter];
-                //                RealMarketValues.Add(RealMarketPoint);
-                //                realMarketCounter++;
+                    predictionCounter = 0;
+                    realMarketCounter = 0;
+                };
 
-                //                //System.Threading.Thread.Sleep(100);
+                dedicatedThread = new System.Threading.Thread(threadStart);
 
-                //                if (realMarketCounter % 5 == 0)
-                //                {
-                //                    realMarketCounter++;
-                //                    break;
-                //                }
-                //            }
-                //            else
-                //            {
-                //                break;
-                //            }
-                //        }
-                //    }
+                if (!dedicatedThread.IsAlive)
+                {
+                    dedicatedThread.Start();
+                }
+                else
+                {
+                    dedicatedThread.Abort();
+                    predictionCounter = 0;
+                    realMarketCounter = 0;
+                    dedicatedThread.Start();
+                }
 
-                //    predictionCounter = 0;
-                //    realMarketCounter = 0;
+                    //for (int i = 0; i < DataHolder.PredictionTimes.Length; i++)
+                    //{
+                    //    MeasureModel PredictionPoint = new MeasureModel();
+                    //    MeasureModel RealMarketPoint;
+                    //    PredictionPoint.DateTime = DataHolder.PredictionTimes[predictionCounter];
+                    //    PredictionPoint.Value = DataHolder.PredictionPrices[predictionCounter];
+                    //    PredictionValues.Add(PredictionPoint);
+                    //    predictionCounter++;
 
-                //}).Start();
+                    //    while (true)
+                    //    {
+                    //        if (realMarketCounter < DataHolder.RealTimes.Length)
+                    //        {
+                    //            RealMarketPoint = new MeasureModel();
+                    //            RealMarketPoint.DateTime = DataHolder.RealTimes[realMarketCounter];
+                    //            RealMarketPoint.Value = DataHolder.RealPrices[realMarketCounter];
+                    //            RealMarketValues.Add(RealMarketPoint);
+                    //            realMarketCounter++;
+
+                    //            //System.Threading.Thread.Sleep(100);
+
+                    //            if (realMarketCounter % 5 == 0)
+                    //            {
+                    //                realMarketCounter++;
+                    //                break;
+                    //            }
+                    //        }
+                    //        else
+                    //        {
+                    //            break;
+                    //        }
+                    //    }
+                    //}
+
+                    //predictionCounter = 0;
+                    //realMarketCounter = 0;
 
                 #endregion
             }

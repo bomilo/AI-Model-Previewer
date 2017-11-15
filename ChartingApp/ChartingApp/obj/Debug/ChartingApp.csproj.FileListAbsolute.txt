@@ -75,3 +75,22 @@ C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\Chart
 C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.Form1.resources
 C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.Properties.Resources.resources
 C:\Users\BoMilo\Google Drive\Programming_shared\ChartingApp3.0\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csproj.GenerateResource.Cache
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Debug\ChartingApp.exe.config
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Debug\ChartingApp.exe
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Debug\ChartingApp.pdb
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Debug\LiveCharts.dll
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.dll
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.dll
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Debug\LiveCharts.pdb
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Debug\LiveCharts.xml
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.pdb
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Debug\LiveCharts.WinForms.xml
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.pdb
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Debug\LiveCharts.Wpf.xml
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csprojResolveAssemblyReference.cache
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Debug\ChartingApp.Form1.resources
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Debug\ChartingApp.Properties.Resources.resources
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csproj.GenerateResource.Cache
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csproj.CoreCompileInputs.cache
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Debug\ChartingApp.exe
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Debug\ChartingApp.pdb
