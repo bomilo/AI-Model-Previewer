@@ -25,6 +25,7 @@ namespace ChartingApp
         private bool previousPredictedPriceIsAHit;
         private double previousRealPrice;
         private double previousPredictedPrice;
+        private bool chartingInProgress = false;
 
         public ChartValues<MeasureModel> PredictionValues { get; set; }
         public ChartValues<MeasureModel> RealMarketValues { get; set; }
@@ -254,7 +255,7 @@ namespace ChartingApp
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != String.Empty)
+            if (textBox1.Text != String.Empty && InstrumentExists(textBox1.Text) && !chartingInProgress)
             {
                 label6.Text = textBox1.Text;
                 label7.Text = "SWISS Exchange";
@@ -302,13 +303,13 @@ namespace ChartingApp
 
                 #region Quick Testing Code
 
+
                 cartesianChart1.Series[0].Values.Clear();
                 cartesianChart1.Series[1].Values.Clear();
 
-                System.Threading.Thread dedicatedThread;
-
-                System.Threading.ThreadStart threadStart = () =>
+                (new System.Threading.Thread(() =>
                 {
+                    chartingInProgress = true;
                     for (int i = 0; i < DataHolder.PredictionTimes.Length; i++)
                     {
                         AddNewPoint(DataHolder.PredictionTimes, DataHolder.PredictionPrices, PredictionValues, predictionCounter, true);
@@ -318,62 +319,75 @@ namespace ChartingApp
                         realMarketCounter++;
                     }
 
+                    ResetCountersAndPreviousData();
+
                     predictionCounter = 0;
                     realMarketCounter = 0;
-                };
+                    chartingInProgress = false;
+                })).Start();
 
-                dedicatedThread = new System.Threading.Thread(threadStart);
 
-                if (!dedicatedThread.IsAlive)
-                {
-                    dedicatedThread.Start();
-                }
-                else
-                {
-                    dedicatedThread.Abort();
-                    predictionCounter = 0;
-                    realMarketCounter = 0;
-                    dedicatedThread.Start();
-                }
+                //for (int i = 0; i < DataHolder.PredictionTimes.Length; i++)
+                //{
+                //    MeasureModel PredictionPoint = new MeasureModel();
+                //    MeasureModel RealMarketPoint;
+                //    PredictionPoint.DateTime = DataHolder.PredictionTimes[predictionCounter];
+                //    PredictionPoint.Value = DataHolder.PredictionPrices[predictionCounter];
+                //    PredictionValues.Add(PredictionPoint);
+                //    predictionCounter++;
 
-                    //for (int i = 0; i < DataHolder.PredictionTimes.Length; i++)
-                    //{
-                    //    MeasureModel PredictionPoint = new MeasureModel();
-                    //    MeasureModel RealMarketPoint;
-                    //    PredictionPoint.DateTime = DataHolder.PredictionTimes[predictionCounter];
-                    //    PredictionPoint.Value = DataHolder.PredictionPrices[predictionCounter];
-                    //    PredictionValues.Add(PredictionPoint);
-                    //    predictionCounter++;
+                //    while (true)
+                //    {
+                //        if (realMarketCounter < DataHolder.RealTimes.Length)
+                //        {
+                //            RealMarketPoint = new MeasureModel();
+                //            RealMarketPoint.DateTime = DataHolder.RealTimes[realMarketCounter];
+                //            RealMarketPoint.Value = DataHolder.RealPrices[realMarketCounter];
+                //            RealMarketValues.Add(RealMarketPoint);
+                //            realMarketCounter++;
 
-                    //    while (true)
-                    //    {
-                    //        if (realMarketCounter < DataHolder.RealTimes.Length)
-                    //        {
-                    //            RealMarketPoint = new MeasureModel();
-                    //            RealMarketPoint.DateTime = DataHolder.RealTimes[realMarketCounter];
-                    //            RealMarketPoint.Value = DataHolder.RealPrices[realMarketCounter];
-                    //            RealMarketValues.Add(RealMarketPoint);
-                    //            realMarketCounter++;
+                //            //System.Threading.Thread.Sleep(100);
 
-                    //            //System.Threading.Thread.Sleep(100);
+                //            if (realMarketCounter % 5 == 0)
+                //            {
+                //                realMarketCounter++;
+                //                break;
+                //            }
+                //        }
+                //        else
+                //        {
+                //            break;
+                //        }
+                //    }
+                //}
 
-                    //            if (realMarketCounter % 5 == 0)
-                    //            {
-                    //                realMarketCounter++;
-                    //                break;
-                    //            }
-                    //        }
-                    //        else
-                    //        {
-                    //            break;
-                    //        }
-                    //    }
-                    //}
-
-                    //predictionCounter = 0;
-                    //realMarketCounter = 0;
+                //predictionCounter = 0;
+                //realMarketCounter = 0;
 
                 #endregion
+            }
+        }
+
+        private void ResetCountersAndPreviousData()
+        {
+            predictionCounter = 0;
+            realMarketCounter = 0;
+            previousCalculatedPrice = 0;
+            previousPredictedPriceIsAHit = false;
+            previousRealPrice = 0;
+            previousPredictedPrice = 0;
+    }
+
+        private bool InstrumentExists(string instrument)
+        {
+            try
+            {
+                double tick = DataHolder.TickTable[instrument];
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
 
@@ -394,7 +408,8 @@ namespace ChartingApp
             AllocFont(font, this.comboBox1, 8f);
             AllocFont(font, this.textBox1, 8f);
             AllocFont(font, this.label6, 15f, System.Drawing.FontStyle.Bold);
-
+            comboBox1.Text = "Shares";
+            textBox1.Text = "STMN";
         }
     }
 

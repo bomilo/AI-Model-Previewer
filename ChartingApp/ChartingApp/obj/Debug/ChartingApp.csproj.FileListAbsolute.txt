@@ -94,3 +94,8 @@ D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\ob
 D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Debug\ChartingApp.csproj.CoreCompileInputs.cache
 D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Debug\ChartingApp.exe
 D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Debug\ChartingApp.pdb
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Debug\ChartingApp.exe.manifest
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Debug\ChartingApp.application
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Debug\ChartingApp.TrustInfo.xml
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Debug\ChartingApp.exe.manifest
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Debug\ChartingApp.application

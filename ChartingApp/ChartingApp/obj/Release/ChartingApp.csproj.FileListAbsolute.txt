@@ -34,7 +34,10 @@ C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\obj\Release\Charti
 C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\obj\Release\ChartingApp.exe
 C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\obj\Release\ChartingApp.pdb
 C:\Users\bosko\Desktop\ChartingApp3.0\ChartingApp\ChartingApp\obj\Release\ChartingApp.csprojResolveAssemblyReference.cache
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Release\ChartingApp.exe
 D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Release\ChartingApp.exe.config
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Release\ChartingApp.exe.manifest
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Release\ChartingApp.application
 D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Release\ChartingApp.exe
 D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Release\ChartingApp.pdb
 D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\bin\Release\LiveCharts.dll
@@ -50,5 +53,8 @@ D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\ob
 D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Release\ChartingApp.Properties.Resources.resources
 D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Release\ChartingApp.csproj.GenerateResource.Cache
 D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Release\ChartingApp.csproj.CoreCompileInputs.cache
-D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Release\ChartingApp.exe
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Release\ChartingApp.TrustInfo.xml
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Release\ChartingApp.exe.manifest
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Release\ChartingApp.application
 D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Release\ChartingApp.pdb
+D:\ZmartProjects\AIModelPreviewApp\AI-Model-Previewer\ChartingApp\ChartingApp\obj\Release\ChartingApp.csprojResolveAssemblyReference.cache
